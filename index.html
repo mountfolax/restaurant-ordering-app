@@ -1,36 +1,41 @@
 <html>
-    <head>
-       <link rel="stylesheet" href="index.css">
-       <link rel="preconnect" href="https://fonts.googleapis.com">
-       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-       <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Smythe&display=swap" rel="stylesheet">
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Smythe&display=swap"
+      rel="stylesheet"
+    />
 
-       <link rel="stylesheet" href="index.css">
-       <title>Resturant Ordering App</title>
-    </head>
-    <body>
+    <link rel="stylesheet" href="index.css" />
+    <title>Resturant Ordering App</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Jimmy's Diner</h1>
+        <p>The best burger and pizzas in town.</p>
+      </header>
 
-        <div class="container">
-            <header>
-                    <h1>Jimmy's Diner</h1>
-                    <p>The best burger and pizzas in town.</p>
-            </header>
+      <main id="main">
+        <section id="store"></section>
+        
+    <div id="addition">
+         <section id="your-order">
+          <h2>Your order</h2>
+        </section>
+
+        <div class="total" id="total"></div>
+        <button id="completeOrder">Complete Order</button>
+    </div>
+       
+
+        <div class="complete" id="complete"></div>
+      </main>
+    </div>
 
 
-            <main id="main">
-                <section id="store"></section>
-
-                <section id= "your-order">
-                    <h2> Your order </h2>
-                </section>
-
-                <div class="total" id="total">
-
-                </div>
-            </main>
-        </div>
-
-	<script src="index.js" type="module"></script>
-    </body>
+    <script src="index.js" type="module" defer></script>
+  </body>
 </html>
-

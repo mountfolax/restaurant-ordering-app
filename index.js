@@ -15,6 +15,8 @@ document.addEventListener("click", function (e) {
   }
 });
 
+
+
 let filterings = [];
 
 function handleAddToCart(itemId) {
@@ -68,12 +70,11 @@ function deletes(btnIds) {
 
   if (Number(save) === 0 || filterings.length === 1) {
     filterings.splice(Number(btnIds), 1);
-    // total.innerHTML = ``;
     orders.innerHTML = ``;
   } else {
     return filterings.splice(Number(btnIds), 1);
   }
-  //    return filterings.splice(Number(btnIds), 1);
+  
 }
 
 function render() {
@@ -103,3 +104,41 @@ function render() {
   return item;
 }
 store.innerHTML = render();
+
+
+
+
+
+
+let complete = document.getElementById("completeOrder");
+
+complete.addEventListener("click", function () {
+  let forms = `
+        <div id= "form">
+            <h2>Enter card details</h2>
+
+            <form>
+                <input type="text" name="" id="namess" placeholder="Enter your name" required>
+                <input type="tel" name="" id="" placeholder="Enter card number" required>
+                <input type="text" name="" id="" placeholder= "Enter CVV" required>
+
+                <button type="submit" id= "pay">Pay</button>
+            </form>
+        </div>
+    `;
+
+  document.getElementById("complete").innerHTML = forms;
+
+  document.getElementById("pay").addEventListener("click", function (event) {
+    event.preventDefault(); // stops the form from auto-submitting
+
+    document.getElementById("complete").style.display = "none";
+    let name = document.getElementById("namess");
+    let value = name.value;
+    console.log(value);
+    document.getElementById('addition').innerHTML = `<h2 class = "message">Thanks, ${value}! Your order is on its way!</h2>`;
+  });
+});
+
+
+
